@@ -46,7 +46,7 @@ export const AuctionBody = () => {
 
       {bool ? (
         <div className="container">
-          <div className="row mt-5">
+          <div className="row mt-4">
             {entregas.map((doc, i) => {
               return <AuctionCard orden={doc} key={i} />;
             })}
@@ -54,7 +54,7 @@ export const AuctionBody = () => {
         </div>
       ) : (
         <div className="container">
-          <div className="row mt-5">
+          <div className="row mt-4">
             {pedidos.map((doc, i) => {
               return <AuctionCard orden={doc} key={i} />;
             })}
