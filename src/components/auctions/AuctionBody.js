@@ -30,14 +30,14 @@ export const AuctionBody = () => {
 
       <div className="text-center mt-3 container">
         <button
-          className={bool ? "w-25 mx-3 btn btn-lg btn-primary" : "w-25 mx-3 btn btn-lg btn-light"}
+          className={bool ? "w-25 mx-3 btn btn-lg btn-success" : "w-25 mx-3 btn btn-lg btn-light"}
           onClick={(e) => setBool(true)}
         >
           Entregas
         </button>
 
         <button
-          className={bool ? "w-25 mx-3 btn-lg btn btn-light" : "w-25 mx-3 btn btn-lg btn-primary"}
+          className={bool ? "w-25 mx-3 btn-lg btn btn-light" : "w-25 mx-3 btn btn-lg btn-success"}
           onClick={(e) => setBool(false)}
         >
           Compras
