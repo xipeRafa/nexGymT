@@ -19,9 +19,9 @@ export const NavComp = () => {
                 <div className=" btn-dark mx-2 disabled mb-2 p-2 text-center">
                   {currentUser.email}
                 </div>
-         {/*        <div onClick={() => logout()} className="btn btn-light mx-2">
+                <div onClick={() => logout()} className="btn btn-light mx-2">
                   SALIR
-                </div> */}
+                </div> 
               </>
             ) : (
               <>
