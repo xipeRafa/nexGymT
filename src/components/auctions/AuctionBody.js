@@ -12,10 +12,15 @@ export const AuctionBody = () => {
 
   const [bool, setBool] = useState(false);
 
-  let entregas = docs.filter((el) => el.deliver === currentUser?.email).filter((el) => el.noDeliver === true);
+  let entregas = docs
+    .filter((el) => el.deliver === currentUser?.email)
+    .filter((el) => el.noDeliver === true)
+    .filter((el) => el.sucursal === "cseri");
+    
   let pedidos = docs
     .filter((el) => !el.entregado)
-    .filter((el) => el.noDeliver === true);
+    .filter((el) => el.noDeliver === true)
+    .filter((el) => el.sucursal === "cseri");
 
   return (
     <div className="border-transparent">
@@ -30,14 +35,22 @@ export const AuctionBody = () => {
 
       <div className="text-center mt-3 container">
         <button
-          className={bool ? "w-25 mx-3 btn btn-lg btn-success" : "w-25 mx-3 btn btn-lg btn-light"}
+          className={
+            bool
+              ? "w-25 mx-3 btn btn-lg btn-success"
+              : "w-25 mx-3 btn btn-lg btn-light"
+          }
           onClick={(e) => setBool(true)}
         >
           Entregas
         </button>
 
         <button
-          className={bool ? "w-25 mx-3 btn-lg btn btn-light" : "w-25 mx-3 btn btn-lg btn-success"}
+          className={
+            bool
+              ? "w-25 mx-3 btn-lg btn btn-light"
+              : "w-25 mx-3 btn btn-lg btn-success"
+          }
           onClick={(e) => setBool(false)}
         >
           Compras
